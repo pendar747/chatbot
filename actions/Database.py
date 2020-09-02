@@ -1,4 +1,5 @@
 import mysql.connector as mysql
+from datetime import datetime
 
 class Database(object):
 
@@ -43,7 +44,15 @@ class Database(object):
     
     def createActivitiesTable(self):
         cursor = self.db.cursor()
-        cursor.execute('CREATE TABLE chatbot.activity ( name VARCHAR(500) NOT NULL , duration INT NOT NULL , id INT NOT NULL AUTO_INCREMENT , PRIMARY KEY (id)) ENGINE = InnoDB;')
+        cursor.execute("""CREATE TABLE `chatbot`.`activity` 
+            ( 
+                `name` VARCHAR(500) NOT NULL , 
+                `duration` INT NOT NULL , 
+                `id` INT NOT NULL AUTO_INCREMENT , 
+                `date` DATETIME NOT NULL , 
+                PRIMARY KEY (`id`)
+            ) ENGINE = InnoDB;
+        """)
         
     def setupDB(self):
         if not self.databaseExists(self.dbName):
@@ -54,8 +63,8 @@ class Database(object):
 
     def insertActivity(self, activityName, duration):
         cursor = self.db.cursor()
-        query = 'INSERT INTO activity (name, duration) VALUES (%s, %s)'
-        values = (activityName, duration)
+        query = 'INSERT INTO activity (name, duration, date) VALUES (%s, %s, %s)'
+        values = (activityName, duration, datetime.now())
         cursor.execute(query, values)
         self.db.commit()
             
