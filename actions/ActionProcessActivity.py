@@ -4,6 +4,8 @@ from Database import Database
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
+# TODO: store activity in database
+# TODO: get activity duration and date
 
 class ActionProcessActivity(Action):
 
