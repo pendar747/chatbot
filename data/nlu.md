@@ -11,8 +11,10 @@
 - How are you?
 
 ## intent:report_activity
-- I [played guitar](activity) today
-- I was [practising guitar](activity)
+- I [played guitar](activity) for [1 hour](duration)
+- I [played guitar](activity)
+- I was [practising guitar](activity) for [30 minutes](duration)
+- I was [practising guitar](activity) for [an hour](duration)
 - I [learned a new song](activity)
 - I was [learning about RASA](activity)
 - I was [working](activity)

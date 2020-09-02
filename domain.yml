@@ -1,3 +1,15 @@
+# TODO: asking what I did on a certain day
+# TODO: asking how much time I've spent on a certain activity within a time range
+# TODO: telling my mood which could include
+  # - how happy I feel from 0 to 10
+  # - What emotion do I feel (anger, sadness, happiness, excitement etc)
+  # - What is the reason for feeling that emotion
+# TODO: asking how I have been feeling on a certain day
+# TODO: asking how many times I've felt a certain emotion
+# TODO: asking how I have been feeling within a certain duration
+# TODO: telling my ideas, including what kind of idea they are (e.g. life learning, business idea, etc)
+# TODO: searching through my ideas, and find the full text of the idea that matches those phrases
+
 intents:
   - greet
   - goodbye
@@ -34,6 +46,9 @@ responses:
   
   utter_encourage:
   - text: "Keep working hard!"
+  - text: "That's awesome, keep going!"
+  - text: "Yes that's the sprit"
+  - text: "Good human, keep pushing"
 
   utter_goodbye:
   - text: "Bye"

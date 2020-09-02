@@ -4,8 +4,8 @@ from Database import Database
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
-# TODO: store activity in database
-# TODO: get activity duration and date
+# TODO: understand activity duration and store it in database
+# TODO: Change this action into a form action so it keeps asking until it fills all the slots
 
 class ActionProcessActivity(Action):
 
