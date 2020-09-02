@@ -20,6 +20,11 @@ class ActionProcessActivity(Action):
         db.connect()
 
         activity = tracker.get_slot('activity')
-        dispatcher.utter_message(f"Keep {activity}!")
+
+        if activity:
+            db.insertActivity(activity, 30)
+            dispatcher.utter_message(f"Keep {activity}!")
+        else:
+            print('No activity!')
 
         return []

@@ -56,5 +56,6 @@ class Database(object):
         cursor = self.db.cursor()
         query = 'INSERT INTO activity (name, duration) VALUES (%s, %s)'
         values = (activityName, duration)
-        cursor.exectue(query, values)
+        cursor.execute(query, values)
+        self.db.commit()
             
